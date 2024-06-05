@@ -1,0 +1,8 @@
+# dbt-utils is a transitive dependency of dbt-unit-testing but we can not include
+# it here because dbt can't handle the dependency graph properly when installing
+# packages from git: https://docs.getdbt.com/docs/build/packages#how-do-i-specify-a-package.
+packages:
+    #- git: "https://github.com/dbt-labs/dbt-utils.git"
+    #  revision: 1.1.1
+  - git: "https://github.com/EqualExperts/dbt-unit-testing"
+    revision: v0.4.12
